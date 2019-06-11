@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "directors")
@@ -34,6 +35,22 @@ public class Director {
 
     public Long getId() {
         return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Film> getFilms() {
+        return films;
+    }
+
+    public void setFilms(List<Film> films) {
+        this.films = films;
     }
 
     public void setId(Long id) {
